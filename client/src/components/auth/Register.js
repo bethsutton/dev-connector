@@ -4,6 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 // import { setAlert } from '../../actions/alert';
 // import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
-      register({ name, email, password });
+      // register({ name, email, password });
+      console.log('SUCCESS');
     }
   };
 
