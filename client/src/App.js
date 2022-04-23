@@ -8,7 +8,7 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
-// import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from './components/dashboard/Dashboard';
 // import ProfileForm from './components/profile-forms/ProfileForm';
 // import AddExperience from './components/profile-forms/AddExperience';
 // import AddEducation from './components/profile-forms/AddEducation';
@@ -17,7 +17,7 @@ import Alert from './components/layout/Alert';
 // import Posts from './components/posts/Posts';
 // import Post from './components/post/Post';
 // import NotFound from './components/layout/NotFound';
-// import PrivateRoute from './components/routing/PrivateRoute';
+import PrivateRoute from './components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
 // Redux
@@ -50,14 +50,14 @@ const App = () => {
         <Alert />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           {/* <Route path="profiles" element={<Profiles />} /> */}
           {/* <Route path="profile/:id" element={<Profile />} /> */}
-          {/* <Route
+          <Route
             path="dashboard"
             element={<PrivateRoute component={Dashboard} />}
-          /> */}
+          />
           {/* <Route
             path="create-profile"
             element={<PrivateRoute component={ProfileForm} />}
